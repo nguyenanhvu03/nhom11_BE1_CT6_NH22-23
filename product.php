@@ -13,6 +13,10 @@
 					$id = $_GET['id'];
 				}
 
+			
+
+				
+
 				
 									
 				
@@ -84,7 +88,7 @@
 						<!-- LOGO -->
 						<div class="col-md-3">
 							<div class="header-logo">
-								<a href="#" class="logo">
+								<a href="index.php" class="logo">
 									<img src="./img/logo.png" alt="">
 								</a>
 							</div>
@@ -291,52 +295,57 @@
 				
 						
 						<div class="product-details">
-							<h2 class="product-name"><?php echo $value['name']  ?></h2>
 							
-							<div>
-								<div class="product-rating">
-									<i class="fa fa-star"></i>
-									<i class="fa fa-star"></i>
-									<i class="fa fa-star"></i>
-									<i class="fa fa-star"></i>
-									<i class="fa fa-star-o"></i>
+							
+								<h2  class="product-name"><?php echo $value['name']  ?></h2>
+								
+								<div>
+									<div class="product-rating">
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star-o"></i>
+									</div>
+									<a class="review-link" href="#">10 Review(s) | Add your review</a>
 								</div>
-								<a class="review-link" href="#">10 Review(s) | Add your review</a>
-							</div>
-							<div>
-								<h3 class="product-price"><?php echo number_format( $value['price']) ?> VND</h3>
-								<span class="product-available">In Stock</span>
-							</div>
-							<p><?php echo $value['description'] ?></p>
+								<div>
+									<h3 class="product-price"><?php echo number_format( $value['price']) ?> VND</h3>
+									<span class="product-available">In Stock</span>
+								</div>
+								<p><?php echo $value['description'] ?></p>
 
-					<?php endif; endforeach; ?>
-							<div class="product-options">
-								<label>
-									Size
-									<select class="input-select">
-										<option value="0">X</option>
-										<option value="0">1X</option>
-										<option value="0">2X</option>
-										<option value="0">3X</option>
-									</select>
-								</label>
-								<label>
-									Color
-									<select class="input-select">
-										<option value="0">Red</option>
-										<option value="0">Blue</option>
-										<option value="0">Green</option>
-										<option value="0">Black</option>
-									</select>
-								</label>
-							</div>
-
-							<div class="add-to-cart">
-
+					
+								<div class="product-options">
+									<label>
+										<?php
+										
+										?>
+										Size
+										<select class="input-select">
+											<option value="0">X</option>
+											<option value="0">1X</option>
+											<option value="0">2X</option>
+											<option value="0">3X</option>
+										</select>
+									</label>
+									<label>
+										Color
+										<select class="input-select">
+											<option value="0">Red</option>
+											<option value="0">Blue</option>
+											<option value="0">Green</option>
+											<option value="0">Black</option>
+										</select>
+									</label>
+								</div>
+								
+								<div class="add-to-cart">
+								<form action="addcart.php" method="GET">
+									<input type="hidden" name="id" value="<?php echo $value['id'] ?>">
 								<div class="qty-label">
 									Qty
 									<div class="input-number">
-										<form action="" method="get">
 										<input type="number" value = "1" name="sluong">
 										<span class="qty-up">+</span>
 										<span class="qty-down">-</span>
@@ -344,12 +353,14 @@
 	
 									</div>
 								</div>
-								<button class="add-to-cart-btn"><i class="fa fa-shopping-cart" name="submit"></i> <a href="addcart.php?id=<?php echo $id ?> ">add to cart</a></button>
-						</form>
-						<?php
-						
-						
-						?>
+									<button type="submit" class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i>add to cart</button>
+
+								</form>
+							
+
+								
+					
+						<?php  endif; endforeach; ?>
 
 							</div>
 

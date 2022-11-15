@@ -47,10 +47,13 @@
 						<li><a href="#"><i class="fa fa-phone"></i> +021-95-51-84</a></li>
 						<li><a href="#"><i class="fa fa-envelope-o"></i> email@email.com</a></li>
 						<li><a href="#"><i class="fa fa-map-marker"></i> 1734 Stonecoal Road</a></li>
+						
 					</ul>
 					<ul class="header-links pull-right">
 						<li><a href="#"><i class="fa fa-dollar"></i> USD</a></li>
 						<li><a href="login.php"><i class="fa fa-user-o"></i> My Account</a></li>
+						<li><a href="contact.php"><i class="fa-solid fa-address-book"></i> Contact</a></li>
+
 					</ul>
 				</div>
 			</div>
@@ -65,7 +68,7 @@
 						<!-- LOGO -->
 						<div class="col-md-3">
 							<div class="header-logo">
-								<a href="#" class="logo">
+								<a href="index.php" class="logo">
 									<img src="./img/logo.png" alt="">
 								</a>
 							</div>
@@ -75,13 +78,13 @@
 						<!-- SEARCH BAR -->
 						<div class="col-md-6">
 							<div class="header-search">
-								<form>
+								<form method="GET" action="store.php">
 									<select class="input-select">
 										<option value="0">All Categories</option>
 										<option value="1">Category 01</option>
 										<option value="1">Category 02</option>
 									</select>
-									<input class="input" placeholder="Search here">
+									<input name="keyword" class="input" placeholder="Search here">
 									<button class="search-btn">Search</button>
 								</form>
 							</div>
@@ -174,12 +177,30 @@
 				
 					<!-- NAV -->
 					<ul class="main-nav nav navbar-nav">
-					<li class="active"><a href="#">Home</a></li>
-						<?php
-						 foreach($getAllprotypes  as $value): ?>
 						
-						<li><a href="#"><?php echo $value['type_name'] ?></a></li>
-						<?php endforeach?>
+					<li class="active"><a href="#">
+						<?php
+						foreach($getAllprotypes  as $key => $value):
+						if($key == 0):
+							?>
+							<li><a href="danhmuc.php?type_id=<?php echo $value['type_id'] ?>"><?php echo $value['type_name'] ?></a></li>
+
+							
+
+						
+						<?php endif; endforeach; ?>
+
+						
+
+
+					</a></li>
+						<?php
+						 foreach($getAllprotypes  as $key => $value):
+						 if($key != 0):
+						 ?>
+						
+						<li><a href="danhmuc.php?type_id=<?php echo $value['type_id'] ?>"><?php echo $value['type_name'] ?></a></li>
+						<?php endif; endforeach?>
 						
 						
 					</ul>

@@ -1,12 +1,33 @@
 <?php session_start();
-
-if(isset($_GET['id'])):
+if(isset($_GET['sluong']) && isset($_GET['id']) )
+{
+    $sl = $_GET['sluong'];
     $id = $_GET['id'];
-    if(isset($_SESSION['cart'][$id])):
-        $_SESSION['cart'][$id]++;
-    else:
-        $_SESSION['cart'][$id] = 1;
-    endif;
-endif;
-header("location:checkout.php ");
+
+    if(isset($_SESSION['cart'][$id])){
+        $_SESSION['cart'][$id] = array(
+            'soluong' => $sl
+        );
+    }
+    else{
+        $_SESSION['cart'][$id]['soluong']+=$sl;
+    }
+    
+
+
+}
+
+header('location:checkout.php');
+
+
+   
+  
+   
+  
+
+
+
+
+
+
 
