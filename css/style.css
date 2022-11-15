@@ -2313,37 +2313,3 @@ textarea.input {
     display: flex;
     justify-content: center;
 }
-
-.title_hang {
-    display: flex;
-    justify-content: center;
-}
-
-.center_row {
-    background: #d4edda;
-    padding: 15px;
-    margin: 15px;
-    border: 1px solid;
-    border-radius: 11px;
-}
-
-.button_sp {
-    display: flex;
-    justify-content: space-around;
-}
-
-.ktra {
-    height: 40px;
-    border: 1px solid;
-    border-radius: 6px;
-    background: #2196f3;
-    color: white;
-}
-
-.muahang {
-    height: 40px;
-    border: 1px solid;
-    border-radius: 6px;
-    background: #ff0000ab;
-    color: white;
-}

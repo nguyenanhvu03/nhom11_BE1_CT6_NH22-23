@@ -118,7 +118,7 @@ textarea {
             </div>
             <div class="row text-center">
                   <div class="col-md-8">
-                     <form method="GET"  action="lh.php" class="contact-form">
+                     <form method="GET"  action="" class="contact-form">
                         <div class="row">
                            <div class="col-xl-6">
                               <input type="text" placeholder="name" name="name">

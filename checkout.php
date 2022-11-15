@@ -233,7 +233,7 @@
 												</label>
 											</div>
 
-										<a href="order.php?tongtien=<?php echo $tongTien ?>" class="primary-btn order-submit">Place order</a>
+										<a href="" class="primary-btn order-submit">Place order</a>
 										
 						</div>
 					<!-- /Order Details -->
