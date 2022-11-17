@@ -71,7 +71,7 @@ a {
 .contact-form input,
 textarea {
   width: 100%;
-  border: 1px solid #555;
+
   padding: 5px 10px;
   text-transform: capitalize;
   margin-top: 15px;

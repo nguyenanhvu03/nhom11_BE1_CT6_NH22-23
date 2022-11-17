@@ -106,12 +106,15 @@ ol {
     background-color: #D10024;
     border: none;
     border-radius: 40px;
-    color: #FFF;
     text-transform: uppercase;
     font-weight: 700;
     text-align: center;
     -webkit-transition: 0.2s all;
     transition: 0.2s all;
+}
+
+.primary-btn a {
+    color: #FFF;
 }
 
 .primary-btn:hover,
@@ -2312,4 +2315,99 @@ textarea.input {
 .container_order {
     display: flex;
     justify-content: center;
+}
+
+@media screen and (max-width: 600px) {
+    table#cart tbody td .form-control {
+        width: 20%;
+        display: inline !important;
+    }
+    .actions .btn {
+        width: 36%;
+        margin: 1.5em 0;
+    }
+    .actions .btn-info {
+        float: left;
+    }
+    .actions .btn-danger {
+        float: right;
+    }
+    table#cart thead {
+        display: none;
+    }
+    table#cart tbody td {
+        display: block;
+        padding: .6rem;
+        min-width: 320px;
+    }
+    table#cart tbody tr td:first-child {
+        background: #333;
+        color: #fff;
+    }
+    table#cart tbody td:before {
+        content: attr(data-th);
+        font-weight: bold;
+        display: inline-block;
+        width: 8rem;
+    }
+    table#cart tfoot td {
+        display: block;
+    }
+    table#cart tfoot td .btn {
+        display: block;
+    }
+}
+
+.text-center {
+    padding: 25px;
+}
+
+.order-submit {
+    width: 100%;
+}
+
+.title_center {
+    display: flex;
+    justify-content: center;
+}
+
+.text_thongtin {
+    padding: 20px;
+}
+
+.titles {
+    background: #d4edda;
+    padding: 20px;
+    margin: 10px;
+    border: 1px solid;
+    border-radius: 10px;
+}
+
+.product-item {
+    display: flex;
+    border-top: 1px solid;
+    padding: 10px;
+}
+
+.buttom_submit {
+    display: flex;
+    justify-content: space-around;
+}
+
+.ktra {
+    height: 50px;
+    width: 40%;
+    background: rgba(0, 0, 255, 0.667);
+    color: white;
+    border-radius: 10px;
+    border: 1px solid;
+}
+
+.tieptuc {
+    height: 50px;
+    width: 40%;
+    background: rgba(255, 0, 0, 0.694);
+    color: white;
+    border-radius: 10px;
+    border: 1px solid;
 }

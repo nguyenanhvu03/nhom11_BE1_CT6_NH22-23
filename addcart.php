@@ -17,7 +17,7 @@ if(isset($_GET['sluong']) && isset($_GET['id']) )
 
 }
 
-header('location:checkout.php');
+header('location:addtocart.php');
 
 
    

@@ -253,11 +253,11 @@
 							</div>
 
 							<div class="product-preview">
-								<img src="./img/i<?php echo $value['image'] ?>" alt="">
+								<img src="./img/<?php echo $value['image'] ?>" alt="">
 							</div>
 
 							<div class="product-preview">
-								<img src="./img/i<?php echo $value['image'] ?>" alt="">
+								<img src="./img/<?php echo $value['image'] ?>" alt="">
 							</div>
 
 							<div class="product-preview">
