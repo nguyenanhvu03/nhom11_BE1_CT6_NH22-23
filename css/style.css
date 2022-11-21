@@ -2381,6 +2381,7 @@ textarea.input {
     margin: 10px;
     border: 1px solid;
     border-radius: 10px;
+    position: relative;
 }
 
 .product-item {
@@ -2410,4 +2411,37 @@ textarea.input {
     color: white;
     border-radius: 10px;
     border: 1px solid;
+}
+
+.phone_zalo {
+    margin-right: 20px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin-bottom: 20px;
+}
+
+.phone_zalo .zalo img {
+    width: 50px;
+    height: 50px;
+}
+
+.phone_zalo .phone img {
+    width: 50px;
+    height: 50px;
+    margin-top: 20px;
+}
+
+.button_close {
+    position: absolute;
+    top: -6px;
+    right: -7px;
+    width: 20px;
+    height: 19px;
+    border: 1px solid;
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+    background: red;
+    color: white;
 }

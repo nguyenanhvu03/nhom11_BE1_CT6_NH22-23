@@ -94,12 +94,25 @@
 								</ul>
 							</div>
 						</div>
+						
+						
 					</div>
 					<!-- /row -->
 				</div>
 				<!-- /container -->
 			</div>
 			<!-- /top footer -->
+			<div class="phone_zalo">
+							<div class="zalo">
+								
+							<a href="tel:0344842232"><img src="./img/call.png" alt=""></a>
+							</div>
+							<div class="phone">
+								
+								<a href="https://zalo.me/0344842232"><img href="" src="/img/icon-zalo.png" alt=""></a>
+								
+							</div>
+						</div>
 
 			<!-- bottom footer -->
 			<div id="bottom-footer" class="section">

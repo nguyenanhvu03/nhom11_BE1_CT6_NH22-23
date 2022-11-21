@@ -19,6 +19,16 @@
 				$getAllProductsLimit3 = $product->getAllProductsLimit(6, 12);
               
 			
+$fullname = $_GET['first-name']. " ". $_GET['last-name'];
+$fulladdress = $_GET['address'] . " " . $_GET['city'];
+
+
+
+							
+
+
+
+
 ?>
 <?php include('header.php') ?>
 
@@ -28,17 +38,27 @@
 
         </div>
         <div class="col-sm-6">
+           
             <div class="titles">
-                        <p>Cảm ơn Quý khách hàng đã chọn mua hàng tại CellphoneS. Trong 15 phút, CellphoneS sẽ SMS hoặc gọi để xác nhận đơn hàng.</p>
+            <div class="button_close">
+               <a href="close_order.php">X</a> 
+            </div>
+               
+                <p>Cảm ơn Quý khách hàng đã chọn mua hàng tại Electro. Trong 15 phút, Electro sẽ SMS hoặc gọi để xác nhận đơn hàng.</p>
                         <h5 class="title_center">ĐẶT HÀNG THÀNH CÔNG</h5>
                         <div class="text_thongtin">
-                        <p>Người Đặt: <?php echo $_GET['first-name']. " ". $_GET['last-name'] ?></p>
+                        <p>Người Đặt: <?php echo $fullname ?></p>
                         <p>Số Điện Thoại: <?php echo $_GET['tel'] ?></p>
                         <p>Email: <?php echo $_GET['email'] ?></p>
-                        <p>Nhận Sản Phẩm Tại: <?php echo $_GET['address'] . " " . $_GET['city'] ?></p>
+                        <p>Nhận Sản Phẩm Tại: <?php echo $fulladdress ?></p>
+                       
                         </div>
                         
+                        
                         <?php
+                        
+                        
+            
                         foreach($_SESSION['cart'] as $key => $value):
                             foreach($getAllProducts as $sp):
                                 if($key == $sp['id']):
@@ -55,10 +75,16 @@
                                 <p> Số Lượng : <?php echo $value['soluong']; ?></p>
                                </div>
                             </div>
-                           
-               
 
-               <?php endif; endforeach; endforeach; ?>
+               <?php
+              
+
+
+             
+            
+            endif; endforeach; endforeach; 
+            
+            ?>
                <div class="buttom_submit">
                                 <button class="ktra" type="submit"> <a href="addtocart.php">Kiểm Tra Đơn Hàng </a> </button>
                                 <button class="tieptuc" type="submit"> <a href="index.php">Tiếp Tục Mua Hàng</a>  </button>

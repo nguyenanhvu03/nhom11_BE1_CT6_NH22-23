@@ -1,4 +1,4 @@
-<?php session_start();
+<?php  session_start();
 				require "config.php";
 				require "models/db.php";
 				require "models/protypes.php";

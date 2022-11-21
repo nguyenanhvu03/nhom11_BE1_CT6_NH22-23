@@ -51,7 +51,7 @@
 					</ul>
 					<ul class="header-links pull-right">
 						<li><a href="#"><i class="fa fa-dollar"></i> USD</a></li>
-						<li><a href="login.php"><i class="fa fa-user-o"></i> My Account</a></li>
+						<li><a href="logins.php"><i class="fa fa-user-o"></i> My Account</a></li>
 						<li><a href="contact.php"><i class="fa-solid fa-address-book"></i> Contact</a></li>
 
 					</ul>
@@ -105,6 +105,7 @@
 								<!-- /Wishlist -->
 
 								<!-- Cart -->
+								
 								<div class="dropdown">
 									<a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
 										<i class="fa fa-shopping-cart"></i>
