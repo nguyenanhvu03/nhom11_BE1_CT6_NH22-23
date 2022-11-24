@@ -26,7 +26,7 @@
             
         </div>
         <div class="col-sm-8">
-            <h2>CHÀO BẠN ĐẾN VỚI TRANG DASHBOARD</h2>
+            <h2 class="title_quanly">CHÀO BẠN ĐẾN VỚI TRANG DASHBOARD</h2>
             <P style="text-align:center">MỜI BẠN CHỌN CHỨC NĂNG QUẢN LÝ HỆ THÔNG TRANG WEB</P>
         </div>
         <div class="col-sm-4">

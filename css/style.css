@@ -2445,3 +2445,7 @@ textarea.input {
     background: red;
     color: white;
 }
+
+.title_quanly {
+    padding: 25px;
+}
