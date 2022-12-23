@@ -1,6 +1,15 @@
 <?php
 class Product extends DB{
     
+public function getAllProductsByQuery ($sql)
+    {
+        $sql = self::$connection->prepare($sql);
+        $sql->execute(); //return an object
+        $items = array();
+        $items = $sql->get_result()->fetch_all(MYSQLI_ASSOC);
+        return $items; //return an array
+}
+
 public function getAllProducts ()
 {
     $sql = self::$connection->prepare("SELECT * FROM products ORDER BY 'id' DESC");
@@ -38,7 +47,8 @@ public function getAllProductslimit4 ()
 
 public function search($keyword)
 {
-    $sql = self::$connection->prepare("SELECT * FROM products  where 'description'  like %?%" );
+    $sql = self::$connection->prepare("SELECT * FROM products  where description  LIKE  ? " );
+    $keyword = "%$keyword%";
     $sql->bind_param("s",$keyword);
     $sql->execute(); //return an object
     $items = array();
@@ -57,7 +67,7 @@ public function countProducts()
 
 public function paginationProducts($x )
 {
-    $sql = self::$connection->prepare("SELECT * FROM products  limit 8  offset ? ");
+    $sql = self::$connection->prepare("SELECT * FROM products where  limit 6  offset ? ");
     $sql->bind_param("i", $x ,);
     $sql->execute(); //return an object
     $items = array();

@@ -1,30 +1,31 @@
-<?php  session_start();
-				require "config.php";
-				require "models/db.php";
-				require "models/protypes.php";
-				require "models/manufacture.php";
-				require "models/products.php";
+<?php session_start();
+	require "config.php";
+  require "models/db.php";
+require "models/products.php";
 
-				$protypes = new Protypes;
-				$getAllprotypes = $protypes->getAllprotypes();
-
-				$manufacture= new Manufacture;
-				$getAllManufacture = $manufacture->getAllManufacture();
-
-				$product= new Product;
+$product= new Product;
 				$getAllProducts = $product->getAllProducts();
 
-				$getAllProductsLimit1 = $product->getAllProductsLimit(6, 0);
-				$getAllProductsLimit2 = $product->getAllProductsLimit(6, 6);
-				$getAllProductsLimit3 = $product->getAllProductsLimit(6, 12);
-        if(empty($_SESSION['cart']) ){
-          header('location:index.php');
-        }
-			
 ?>
 
 
-<?php include('header.php') ?>
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
+
+<!-- Bootstrap -->
+<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css"/>
+
+<!-- Slick -->
+<link type="text/css" rel="stylesheet" href="css/slick.css"/>
+<link type="text/css" rel="stylesheet" href="css/slick-theme.css"/>
+
+<!-- nouislider -->
+<link type="text/css" rel="stylesheet" href="css/nouislider.min.css"/>
+
+<!-- Font Awesome Icon -->
+<link rel="stylesheet" href="css/font-awesome.min.css">
+
+<!-- Custom stlylesheet -->
+<link type="text/css" rel="stylesheet" href="css/style.css"/>
 
 <h2 class="text-center"> Giỏ Hàng </h2>
 <div class="container"> 
@@ -42,15 +43,14 @@
   
   <?php 
   $tongTien = 0;
-  foreach($_SESSION['cart'] as $key => $value) : 
+
+  if(isset($_SESSION['cart'])):
+  
+foreach($_SESSION['cart'] as $key => $value) : 
 
 foreach($getAllProducts as $sp):
     if($key == $sp['id']):
       
-
-
-
-     
 
 ?>  
   <tr> 
@@ -92,7 +92,7 @@ foreach($getAllProducts as $sp):
  
   </tr> 
 
-  <?php endif; endforeach; endforeach; ?>
+  <?php endif; endforeach; endforeach; endif; ?>
   <tr> 
     <?php
    

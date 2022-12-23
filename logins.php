@@ -53,9 +53,16 @@ $user = new User();
                         $username = $_POST['username'];
                         $password = $_POST['password'];
                         if($user->checkLogon($username , $password)){
+                          if($username == "admin" && $password == "12345"){
+                            header('location:AdminLTE-3/index.php');
+                          }
+                          else{
                             $_SESSION['user'] = $username;
-                            header('location:quanly.php');
-                        
+                            header('location:index.php');
+
+                          }
+                           
+                  
                         }
                         else{
                            echo "<p class='text_red' > Sai Username Hoặc Password </p>";

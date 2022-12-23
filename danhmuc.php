@@ -17,15 +17,7 @@
 				$getAllProductsLimit1 = $product->getAllProductsLimit(6, 0);
 				$getAllProductsLimit2 = $product->getAllProductsLimit(6, 6);
 				$getAllProductsLimit3 = $product->getAllProductsLimit(6, 12);
-
-				
-				
-
-				
-
-
-				
-				
+			
 ?>
 
  <?php include('header.php') ?>

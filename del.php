@@ -7,4 +7,4 @@ if(isset($_GET['id'])){
 else{
     unset($_SESSION['cart']);
 }
-header('location:addcart.php');
+header('location:index.php');

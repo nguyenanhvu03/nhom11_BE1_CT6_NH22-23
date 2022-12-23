@@ -2449,3 +2449,19 @@ textarea.input {
 .title_quanly {
     padding: 25px;
 }
+
+.filter_data {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.filter_data .product {
+    width: calc(100% / 3 - 30px);
+    margin-bottom: 80px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.delete_wishlist{
+    
+}

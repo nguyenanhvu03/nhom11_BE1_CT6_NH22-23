@@ -1,9 +1,11 @@
+
+
 <?php
-				require "config.php";
-				require "models/db.php";
-				require "models/protypes.php";
-				require "models/manufacture.php";
-				require "models/products.php";
+				require_once "config.php";
+				require_once "models/db.php";
+				require_once "models/protypes.php";
+				require_once "models/manufacture.php";
+				require_once "models/products.php";
 
 				$protypes = new Protypes;
 				$getAllprotypes = $protypes->getAllprotypes();
@@ -18,9 +20,13 @@
 				$getAllProductsLimit2 = $product->getAllProductsLimit(6, 6);
 				$getAllProductsLimit3 = $product->getAllProductsLimit(6, 12);
 			
+
+				
 ?>
 
- <?php include('header.php') ?>
+
+ <?php include('header.php')?>
+ 
 		<!-- SECTION -->
 		<div class="section">
 			<!-- container -->
@@ -156,13 +162,13 @@
 													<i class="fa fa-star"></i>
 												</div>
 												<div class="product-btns">
-													<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">add to wishlist</span></button>
+													<button class="add-to-wishlist"> <a href="addwishlist.php?id=<?php echo $value['id']; ?>"><i class="fa fa-heart-o"></i></a> <span class="tooltipp">add to wishlist</span></button>
 													<button class="add-to-compare"><i class="fa fa-exchange"></i><span class="tooltipp">add to compare</span></button>
-													<button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">quick view</span></button>
+													<button class="quick-view"><a href="product.php?id=<?php echo $value['id'] ?>"><i class="fa fa-eye"></i></a> <span class="tooltipp">  quick view</span></button>
 												</div>
 											</div>
 											<div class="add-to-cart">
-												<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> <a href="product.php?id=<?php echo $value['id'] ?>">add to cart</a></button>
+												<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> <a href="?action=add_to_cart&id=<?php echo $value['id'] ?>">add to cart</a></button>
 											</div>
 										</div>
 										
@@ -316,7 +322,7 @@
 												</div>
 											</div>
 											<div class="add-to-cart">
-												<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> <a href="product.php?id=<?php echo $value['id']?>">add to cart</a></button>
+												<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> <a href="?action=add_to_cart&id=<?php echo $value['id'] ?>">add to cart</a></button>
 											</div>
 										</div>
 										
